@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<RegistryFilterList xmlns="http://www.microsoft.com/MdmMigrationAnalysisTool">
+  <BlockedKeyList>
+    <BlockedKey>Software\Policies\Microsoft</BlockedKey>
+    <BlockedKey>Software\Microsoft</BlockedKey>
+    <BlockedKey>System</BlockedKey>
+  </BlockedKeyList>
+  <ExcludedKeyList>
+    <ExcludedKey>Software\Policies\Microsoft\Office</ExcludedKey>
+    <ExcludedKey>Software\Microsoft\Office</ExcludedKey>
+    <ExcludedKey>Software\Microsoft\Windows\CurrentVersion\Explorer</ExcludedKey>
+    <ExcludedKey>Software\Microsoft\Internet Explorer</ExcludedKey>
+    <ExcludedKey>software\policies\microsoft\shared tools\proofing tools\1.0\office</ExcludedKey>
+    <ExcludedKey>software\policies\microsoft\shared tools\proofing tools\spelling</ExcludedKey>
+    <ExcludedKey>software\policies\microsoft\imejp\15.0\wswordcomment\plugins\mapi</ExcludedKey>
+    <ExcludedKey>software\policies\microsoft\ime\shared\15.0\sharepointdict</ExcludedKey>
+    <ExcludedKey>software\policies\microsoft\shared tools\graphics filters</ExcludedKey>
+    <ExcludedKey>software\policies\microsoft\windows\currentversion\explorer</ExcludedKey>
+    <ExcludedKey>software\policies\microsoft\windows\windows search\preferences</ExcludedKey>
+    <ExcludedKey>software\policies\microsoft\exchange\exchange provider</ExcludedKey>
+    <ExcludedKey>software\policies\microsoft\exchange</ExcludedKey>
+    <ExcludedKey>software\policies\microsoft\shared tools\proofing tools</ExcludedKey>
+    <ExcludedKey>software\microsoft\exchange\exchange provider</ExcludedKey>
+    <ExcludedKey>software\microsoft\shared tools\proofing tools\1.0\office</ExcludedKey>
+    <ExcludedKey>software\microsoft\shared tools\proofing tools\spelling</ExcludedKey>
+    <ExcludedKey>software\microsoft\shared tools\graphics filters</ExcludedKey>
+    <ExcludedKey>software\microsoft\windows\windows search\preferences</ExcludedKey>
+    <ExcludedKey>software\microsoft\exchange</ExcludedKey>
+    <ExcludedKey>software\microsoft\shared tools\proofing tools</ExcludedKey>
+  </ExcludedKeyList>
+</RegistryFilterList>

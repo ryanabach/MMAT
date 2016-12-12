@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<PartiallySupportedPolicies xmlns="http://www.microsoft.com/MdmMigrationAnalysisTool">
+  <PartiallySupportedList>
+    <PartiallySupported>
+      <Id>Only subset is supported in MDM</Id>
+      <Message>Only subset is supported in MDM (details TBD)</Message>
+    </PartiallySupported>
+  </PartiallySupportedList>
+</PartiallySupportedPolicies>
