@@ -81,11 +81,23 @@
             background-color: red;
             color:white
         }
+        th.longValue
+        {
+            //word-wrap: break-word
+            //max-width: 100px
+            color:green
+        }
+        /*
         table 
         {
             width: 1000
             overflow: hidden;
             table-layout: fixed;
+        }
+        */
+        .policyContainer .policyHeader {
+            background-color:#f0f0f0;
+            cursor:default;
         }
     </style>
     </head>
@@ -145,14 +157,31 @@
                 // Set the textarea to the concatenated data
                 $('#previewReportForMicrosoft').val(reportHeaderAll + reportBody);
             });
+
+            // Invoked when the user clicks one of the top-level headers (e.g. (+) SUPPORTED: ADMX backed policies) to
+            // expand or collapse the list.
+            $(".policyHeader").click(function () {
+                $header = $(this);
+                $content = $header.next();
+                $content.slideToggle(250, function () {
+                    // change the value of the header after execution to reflect whether we should have a + or -
+                    $header.text(function () {
+                        // By convention, the headers are named "(+) blah..." or "(-) blah...".  As we toggle the state,
+                        // flip the '+' or '-' character to reflect whether an expand or collapse is appropriate.
+                        $expandOrCollapse = $content.is(":visible") ? "(-)" : "(+)";
+                        return ($expandOrCollapse + ($header.text()).substr(3));
+                    });
+                });
+            })
+
         });
     </script>
     
     <body>
 
-	<!--
-	    "Main" block which invokes further match selectors to process policy information.
-	-->
+    <!--
+        "Main" block which invokes further match selectors to process policy information.
+    -->
 
     <!-- Displays the copyright/disclaimer/opening fields -->
     <xsl:apply-templates select="my:PolicyReportXml" />
@@ -226,6 +255,13 @@
     <Br>effort attempt to understand your domain policies but it has known limitations.</Br>
     <Br/>
     <Br>Please read and understand the Caveats and Warnings section of the associated documentation.</Br>
+
+    <xsl:if test="my:ProcessingErrors/my:PolicyInfoError">
+      <Br/>
+      <Br><B style="color:red;">WARNING - MMAT encountered errors</B></Br>
+      <Br>MMAT encountered errors during its execution.  This means it has not analyzed all policies that you are using.</Br>
+      <Br>Please analyze the reports, <a href="#MMAT-Errors">listed at the bottom of this report</a>, to understand the implications.</Br>
+    </xsl:if>
 </xsl:template>
 
 <!-- 
@@ -241,16 +277,28 @@
 
     <table border="1" >
         <tr class="informational">
-            <th>User Name</th>
-            <th>Computer Name</th>
+            <xsl:if test="my:UserName">
+               <th>User Name</th>
+               <th>Computer Name</th>
+            </xsl:if>
+            <xsl:if test="my:TargetDomain">
+               <th>Target Domain</th>
+            </xsl:if>
             <th>OS Version</th>
             <th>Report Creation Time</th>
+            <th>MMAT Version</th>
         </tr>
         <tr>
-            <td><xsl:value-of select="my:UserName" /></td>
-            <td><xsl:value-of select="my:ComputerName" /></td>
+            <xsl:if test="my:UserName">
+                <td><xsl:value-of select="my:UserName" /></td>
+                <td><xsl:value-of select="my:ComputerName" /></td>
+            </xsl:if>
+            <xsl:if test="my:TargetDomain">
+                <td><xsl:value-of select="my:TargetDomain" /></td>
+            </xsl:if>
             <td><xsl:value-of select="my:OSVersion" /></td>
             <td><xsl:value-of select="my:ReportCreationTime" /></td>
+            <td><xsl:value-of select="../my:MMATVersion" /></td>
         </tr>
     </table>
 </xsl:template>
@@ -272,32 +320,40 @@
             table with reports and data from that type.
         -->
         <xsl:if test="my:PolicyInfo[@xsi:type='SecurityAccountPolicyInfo']">
-            <h3>SUPPORTED: Security Account Policies</h3>
-            <P>These Security policies are fully supported by MDM.  It should be possible to directly migrate these settings to MDM.</P>
-            <table border="1">
-                <tr class="supported">
-                    <th>Policy Name</th>
-                    <th>State</th>
-                    <th>GPO Name</th>
-                    <th>Feedback?</th>
-                </tr>
-            <xsl:apply-templates select="my:PolicyInfo[@xsi:type='SecurityAccountPolicyInfo']" />
-            </table>
+            <div class="policyContainer">
+                <h3 class="policyHeader">(-) SUPPORTED: Security Account Policies</h3>
+                <div class="policyContent">
+                    <P>These Security policies are fully supported by MDM.  It should be possible to directly migrate these settings to MDM.</P>
+                    <table border="1">
+                        <tr class="supported">
+                            <th>Policy Name</th>
+                            <th>State</th>
+                            <th>GPO Name</th>
+                            <th>Feedback?</th>
+                        </tr>
+                    <xsl:apply-templates select="my:PolicyInfo[@xsi:type='SecurityAccountPolicyInfo']" />
+                    </table>
+                </div>
+            </div>
         </xsl:if>
 
         <xsl:if test="my:PolicyInfo[@xsi:type='AdmPolicyInfo']">
-            <h3>SUPPORTED: ADMX backed policies</h3>
-            <P>These System ADMX policies are fully supported by MDM.  It should be possible to directly migrate these settings to MDM.</P>
-            <table border="1">
-                <tr class="supported">
-                    <th>Policy Name</th>
-                    <th>State</th>
-                    <th>GPO Name</th>
-                    <th>Feedback?</th>
-                </tr>
-                <!-- This iterates ALL AdmPolicyInfo types under the current {User|Computer}\SupportedPolicies to actually build up table -->
-                <xsl:apply-templates select="my:PolicyInfo[@xsi:type='AdmPolicyInfo']" />
-            </table>
+            <div class="policyContainer">
+                <h3 class="policyHeader">(-) SUPPORTED: ADMX backed policies</h3>
+                <div class="policyContent">
+                    <P>These System ADMX policies are fully supported by MDM.  It should be possible to directly migrate these settings to MDM.</P>
+                    <table border="1">
+                        <tr class="supported">
+                            <th>Policy Name</th>
+                            <th>State</th>
+                            <th>GPO Name</th>
+                            <th>Feedback?</th>
+                        </tr>
+                        <!-- This iterates ALL AdmPolicyInfo types under the current {User|Computer}\SupportedPolicies to actually build up table -->
+                        <xsl:apply-templates select="my:PolicyInfo[@xsi:type='AdmPolicyInfo']" />
+                    </table>
+                </div>
+            </div>
         </xsl:if>
     </xsl:if>
 </xsl:template>
@@ -308,41 +364,47 @@
 -->
 <xsl:template match="my:PartiallySupportedPolicies">
     <xsl:if test="my:PolicyInfo">
-        <h2>Partially supported policies</h2>
+        <div class="policyContainer">
+            <h3 class="policyHeader">(-) PARTIALLY SUPPORTED:Security Account Policies</h3>
+            <div class="policyContent">
+                <p>These policies have partial support, which is to say while there is not a 1-1 mapping of existing Group Policy to the objects
+                there should be rough equivalents.  You will need to manually migrate to these new settings, per the documentation.</p>
+                
+                <table border="1">
+                    <tr class="partiallySupported">
+                        <th>Policy Name</th>
+                        <th>State</th>
+                        <th>Explanation</th>
+                        <th>GPO Name</th>
+                        <th>Feedback?</th>
+                    </tr>
+                    <xsl:apply-templates select="../my:PartiallySupportedPolicies/my:PolicyInfo[@xsi:type='SecurityAccountPolicyInfo']" />
+                </table>
+            </div>
+        </div>
 
-        <h3>PARTIALLY SUPPORTED:Security Account Policies</h3>
-        <p>These policies have partial support, which is to say while there is not a 1-1 mapping of existing Group Policy to the objects
-        there should be rough equivalents.  You will need to manually migrate to these new settings, per the documentation.</p>
-        
-        <table border="1">
-            <tr class="partiallySupported">
-                <th>Policy Name</th>
-                <th>State</th>
-                <th>Explanation</th>
-                <th>GPO Name</th>
-                <th>Feedback?</th>
-            </tr>
-            <xsl:apply-templates select="../my:PartiallySupportedPolicies/my:PolicyInfo[@xsi:type='SecurityAccountPolicyInfo']" />
-        </table>
-
-        <h3>PARTIALLY SUPPORTED: Admx based policies</h3>
-        <p>These policies have partial support, which is to say while there is not a 1-1 mapping of existing Group Policy to the objects
-        there should be rough equivalents.  You will need to manually migrate to these new settings, per the documentation.</p>
-        
-        <table border="1">
-            <tr class="partiallySupported">
-                <th>Policy Name</th>
-                <th>State</th>
-                <th>Explanation</th>
-                <th>GPO Name</th>
-                <th>Feedback?</th>
-            </tr> 
-            <!-- 
-                We use the special query here to force a match on the my:PartiallySupportedPolicies/my:PolicyInfo[@xsi:type='AdmPolicyInfo']
-                pattern, which returns 'Explanation' which the default 'AdmPolicyInfo' does not 
-            -->
-            <xsl:apply-templates select="../my:PartiallySupportedPolicies/my:PolicyInfo[@xsi:type='AdmPolicyInfo']" />
-        </table>
+        <div class="policyContainer">
+            <h3 class="policyHeader">(-) PARTIALLY SUPPORTED: Admx based policies</h3>
+            <div class="policyContent">
+                <p>These policies have partial support, which is to say while there is not a 1-1 mapping of existing Group Policy to the objects
+                there should be rough equivalents.  You will need to manually migrate to these new settings, per the documentation.</p>
+                
+                <table border="1">
+                    <tr class="partiallySupported">
+                        <th>Policy Name</th>
+                        <th>State</th>
+                        <th>Explanation</th>
+                        <th>GPO Name</th>
+                        <th>Feedback?</th>
+                    </tr> 
+                    <!-- 
+                        We use the special query here to force a match on the my:PartiallySupportedPolicies/my:PolicyInfo[@xsi:type='AdmPolicyInfo']
+                        pattern, which returns 'Explanation' which the default 'AdmPolicyInfo' does not 
+                    -->
+                    <xsl:apply-templates select="../my:PartiallySupportedPolicies/my:PolicyInfo[@xsi:type='AdmPolicyInfo']" />
+                </table>
+            </div>
+        </div>
     </xsl:if>
 </xsl:template>
 
@@ -354,133 +416,203 @@
 <xsl:template match="my:UnsupportedPolicies">
     <xsl:if test="my:PolicyInfo">
         <xsl:if test="my:PolicyInfo[@xsi:type='SecurityAccountPolicyInfo']">
-            <h3>NOT SUPPORTED: Security Account Policies</h3>
-            <br>These Security settings that are configured on the target but not supported by MDM.</br>
-            <table border="1">
-                <tr class="unsupported">
-                    <th>Policy Name</th>
-                    <th>State</th>
-                    <th>GPO Name</th>
-                    <th>Feedback?</th>
-                </tr>
-            <xsl:apply-templates select="my:PolicyInfo[@xsi:type='SecurityAccountPolicyInfo']" />
-            </table>
+            <div class="policyContainer">
+                <h3 class="policyHeader">(-) NOT SUPPORTED: Security Account Policies</h3>
+                <div class="policyContent">
+                    <br>These Security settings that are configured on the target but not supported by MDM.</br>
+                    <table border="1">
+                        <tr class="unsupported">
+                            <th>Policy Name</th>
+                            <th>State</th>
+                            <th>GPO Name</th>
+                            <th>Feedback?</th>
+                        </tr>
+                    <xsl:apply-templates select="my:PolicyInfo[@xsi:type='SecurityAccountPolicyInfo']" />
+                    </table>
+                </div>
+              </div>
         </xsl:if>
 
         <xsl:if test="my:PolicyInfo[@xsi:type='AdmPolicyInfo']">
-            <h3>NOT SUPPORTED: ADMX Based Policies</h3>
-            <br>These Windows settings are configured on the target but not supported by MDM.  Creating a custom ADMX to map to the underlying registry key for MDM is <b>not</b> allowed.</br>
-            <table border="1">
-                <tr class="unsupported">
-                    <th>Policy Name</th>
-                    <th>State</th>
-                    <th>GPO Name</th>
-                    <th>Feedback?</th>
-                </tr>
-            <xsl:apply-templates select="my:PolicyInfo[@xsi:type='AdmPolicyInfo']" />
-          </table>
+            <div class="policyContainer">
+                <h3 class="policyHeader">(-) NOT SUPPORTED: ADMX Based Policies</h3>
+                <div class="policyContent">
+                    <br>These Windows settings are configured on the target but not supported by MDM.  Creating a custom ADMX to map to the underlying registry key for MDM is <b>not</b> allowed.</br>
+                    <table border="1">
+                        <tr class="unsupported">
+                            <th>Policy Name</th>
+                            <th>State</th>
+                            <th>GPO Name</th>
+                            <th>Feedback?</th>
+                        </tr>
+                    <xsl:apply-templates select="my:PolicyInfo[@xsi:type='AdmPolicyInfo']" />
+                    </table>
+                </div>
+              </div>
         </xsl:if>
 
         <xsl:if test="my:PolicyInfo[@xsi:type='RegistrySettingPolicyInfo']  or my:PolicyInfo[@xsi:type='AdmPolicyInfo']">
-            <h3>NOT SUPPORTED: Registry Based Policies</h3>
-            <br>These are registry based policies that are configuring core Windows functionality.  You may <b>not</b> create custom ADMX to configure these settings via MDM/ADMX Ingestion.  The OS will explicitly block this.</br>
-
-            <table border="1">
-                <tr class="unsupported">
-                    <th>Key Path</th>
-                    <th>Value</th>
-                    <th>GPO Name</th>
-                    <th>Feedback?</th>
-                </tr>
-                <xsl:apply-templates select="my:PolicyInfo[@xsi:type='RegistrySettingPolicyInfo']" />
-                <xsl:apply-templates select="my:PolicyInfo[@xsi:type='RawRegistryPolicyInfo']" />
-            </table>
+            <div class="policyContainer">
+                <h3 class="policyHeader">(-) NOT SUPPORTED: Registry Based Policies</h3>
+                <div class="policyContent">
+                    <br>These are registry based policies that are configuring core Windows functionality.  You may <b>not</b> create custom ADMX to configure these settings via MDM/ADMX Ingestion.  The OS will explicitly block this.</br>
+        
+                    <table border="1" style="table-layout:fixed;max-width: 500px">
+                        <tr class="unsupported">
+                            <th>Key Path</th>
+                            <th>Value</th>
+                            <th>GPO Name</th>
+                            <th>Feedback?</th>
+                        </tr>
+                        <xsl:apply-templates select="my:PolicyInfo[@xsi:type='RegistrySettingPolicyInfo']" />
+                        <xsl:apply-templates select="my:PolicyInfo[@xsi:type='RawRegistryPolicyInfo']" />
+                    </table>
+                </div>
+              </div>
         </xsl:if>        
 
         <xsl:if test="my:PolicyInfo[@xsi:type='SystemServicesPolicyInfo']">
-            <h3>NOT SUPPORTED: Services</h3>
-            <P>System service configuration is not supported by MDM.  These services are configured on the target via Group Policy.</P>
-            <table border="1">
-                <tr class="unsupported">
-                    <th>Service Name</th>
-                    <th>GPO Name</th>
-                    <th>Feedback?</th>
-                </tr>
-                <xsl:apply-templates select="my:PolicyInfo[@xsi:type='SystemServicesPolicyInfo']" />
-            </table>
+            <div class="policyContainer">
+                <h3 class="policyHeader">(-) NOT SUPPORTED: Services</h3>
+                <div class="policyContent">
+                    <P>System service configuration is not supported by MDM.  These services are configured on the target via Group Policy.</P>
+                    <table border="1">
+                        <tr class="unsupported">
+                            <th>Service Name</th>
+                            <th>GPO Name</th>
+                            <th>Feedback?</th>
+                        </tr>
+                        <xsl:apply-templates select="my:PolicyInfo[@xsi:type='SystemServicesPolicyInfo']" />
+                    </table>
+                </div>
+              </div>
         </xsl:if>
 
         <xsl:if test="my:PolicyInfo[@xsi:type='ScriptPolicyInfo']">
-            <h3>NOT SUPPORTED: Scripts</h3>
-            <P>Scripts are not supported by MDM.  These scripts are configured on the target via Group Policy.</P>
-            <table border="1">
-                <tr class="unsupported">
-                    <th>Script Name</th>
-                    <th>Type</th>
-                    <th>GPO Name</th>
-                    <th>Feedback?</th>
-                </tr>
-                <xsl:apply-templates select="my:PolicyInfo[@xsi:type='ScriptPolicyInfo']" />
-            </table>
+            <div class="policyContainer">
+                <h3 class="policyHeader">(-) NOT SUPPORTED: Scripts</h3>
+                <div class="policyContent">
+                    <P>Scripts are not supported by MDM.  These scripts are configured on the target via Group Policy.</P>
+                    <table border="1">
+                        <tr class="unsupported">
+                            <th>Script Name</th>
+                            <th>Type</th>
+                            <th>GPO Name</th>
+                            <th>Feedback?</th>
+                        </tr>
+                        <xsl:apply-templates select="my:PolicyInfo[@xsi:type='ScriptPolicyInfo']" />
+                    </table>
+                </div>
+              </div>
         </xsl:if>
 
         <xsl:if test="my:PolicyInfo[@xsi:type='MmatUnprocessedPolicyInfo']">
-            <h3>NOT SUPPORTED: NON-ADMX AND NON-SECURITY CLIENT SIDE EXTENSIONS</h3>
-            <br>MDM only supports mapping of Group Policies that are configured by either ADMX </br>
-            <br>or by the Security Client Side Extension (CSE).  You have one or more policies </br>
-            <br>that is being configured by another CSE.</br>
-            <br/>
-            <br>The current version of the MDM Migration Analysis tool does not support parsing out </br>
-            <br>the specific values of these CSE's.  Please look at your domain configuration to </br>
-            <br>determine which values are specified.  They are not supported by MDM in any event.</br>
-
-            <table border="1">
-                <tr class="unsupported">
-                    <th>Type of Policy</th>
-                    <th>GPO Name</th>
-                    <th>Feedback?</th>
-                </tr>
-                <xsl:apply-templates select="my:PolicyInfo[@xsi:type='MmatUnprocessedPolicyInfo']" />
-            </table>
+            <div class="policyContainer">
+                <h3 class="policyHeader">(-) NOT SUPPORTED: NON-ADMX AND NON-SECURITY CLIENT SIDE EXTENSIONS</h3>
+                <div class="policyContent">
+                    <br>MDM only supports mapping of Group Policies that are configured by either ADMX </br>
+                    <br>or by the Security Client Side Extension (CSE).  You have one or more policies </br>
+                    <br>that is being configured by another CSE.</br>
+                    <br/>
+                    <br>The current version of the MDM Migration Analysis tool does not support parsing out </br>
+                    <br>the specific values of these CSE's.  Please look at your domain configuration to </br>
+                    <br>determine which values are specified.  They are not supported by MDM in any event.</br>
+        
+                    <table border="1">
+                        <tr class="unsupported">
+                            <th>Type of Policy</th>
+                            <th>GPO Name</th>
+                            <th>Feedback?</th>
+                        </tr>
+                        <xsl:apply-templates select="my:PolicyInfo[@xsi:type='MmatUnprocessedPolicyInfo']" />
+                    </table>
+                </div>
+            </div>
         </xsl:if>
     </xsl:if>
 </xsl:template>
 
 <xsl:template match="my:GroupPolicyObjects">
-    <h1>Group Policy Object Information</h1>
-    <br>The Target Computer is using the following Group Policy Objects (GPO's).  Note that GPO's</br>
-    <br>that were disabled or had access denied on the target have already been filtered out.</br>
-    <table border="1">
-        <tr class="informational">
-            <th>Group Policy Object Name</th>
-            <th>Identifier</th>
-            <th>Created Time</th>
-            <th>Modified Time</th>
-        </tr>
-        <xsl:apply-templates select="my:GpoInfo" />
-    </table>
-</xsl:template>
-
-<xsl:template match="my:GpoInfo">
-    <tr>
-        <td><xsl:value-of select="my:Name" /></td>
-        <td><xsl:value-of select="my:Identifier/types:Identifier" /></td>
-        <td><xsl:value-of select="my:CreatedTime" /></td>
-        <td><xsl:value-of select="my:ModifiedTime" /></td>
-    </tr>
+    <div class="policyContainer">
+        <h1 class="policyHeader">(-) Group Policy Object Information</h1>
+    	<div class="policyContent">
+            <br>The Target Computer is using the following Group Policy Objects (GPO's).  Note that GPO's</br>
+            <br>that were disabled or had access denied on the target have already been filtered out.</br>
+            <table border="1">
+                <tr class="informational">
+                <th>Group Policy Object Name</th>
+                <th>Identifier</th>
+                <th>Created Time</th>
+                <th>Modified Time</th>
+            </tr>
+            <xsl:apply-templates select="my:GpoInfo" />
+        </table>
+        </div>
+    </div>
 </xsl:template>
 
 <xsl:template match="my:ProcessingErrors">
     <xsl:if test="my:PolicyInfoError">
-        <h1>Errors during processing</h1>
-        <br>The MDM Migration tool encountered one or more errors during processing.  These Group</br>
-        <br>Policy Objects were not considered in the final output.</br>
-        <table border="1">
-            <tr class="error">
-                <th>Group Policy Object Name</th>
-            </tr>
-            <xsl:apply-templates select="my:PolicyInfoError" />
-        </table>
+    <a name="#MMAT-Errors"/>
+    <div class="policyContainer">
+        <h1 class="policyHeader">(-) Errors during processing</h1>
+        <div class="policyContent">
+            <br>The MDM Migration tool encountered one or more errors during processing.  These Group</br>
+            <br>Policy Objects were not considered in the final output.</br>
+            <table border="1">
+                <tr class="error">
+                    <th>Group Policy Object Name</th>
+                </tr>
+                <xsl:apply-templates select="my:PolicyInfoError" />
+            </table>
+            </div>
+        </div>
+    </xsl:if>
+</xsl:template>
+
+<!-- 
+    Displays AdmxBackedPolicies.  For detailed explanation of what's going on, 
+    see match="my:SupportedPolicies" which is more fully commented and analogous to this function.
+
+    AdmxBackedPolicies can ultimately come from raw registry or alterantely AdmPolicyInfo's from 3rd parties (but not Windows itself).
+-->
+<xsl:template match="my:AdmxBackedPolicies">
+    <xsl:if test="my:PolicyInfo[@xsi:type='RegistrySettingPolicyInfo']  or my:PolicyInfo[@xsi:type='AdmPolicyInfo']">
+        <div class="policyContainer">
+            <h3 class="policyHeader">(-) POLICIES THAT NEED CUSTOM ADMX: Registry policies</h3>
+            <div class="policyContent">
+                <br>These are registry based policies on the target. You can create custom ADMX to support them on MDM.</br>
+        
+                <table border="1">
+                    <tr class="admxBacked">
+                        <th>Key Path</th>
+                        <th>Value</th>
+                        <th>GPO Name</th>
+                        <th>Feedback?</th>
+                    </tr>
+                    <xsl:apply-templates select="my:PolicyInfo[@xsi:type='RegistrySettingPolicyInfo']" />
+                    <xsl:apply-templates select="my:PolicyInfo[@xsi:type='RawRegistryPolicyInfo']" />
+                </table>
+            </div>
+        </div>
+    </xsl:if>
+
+    <xsl:if test="my:PolicyInfo[@xsi:type='AdmPolicyInfo']">
+        <div class="policyContainer">
+            <h3 class="policyHeader">(-) POLICIES THAT NEED CUSTOM ADMX: Pre-existing custom ADMX Policies</h3>
+            <div class="policyContent">
+                <P>These are policies (non-Windows) you're already configuring with a custom ADMX.  These are supported on MDM provided the same ADMX is deployed.</P>
+                <table border="1">
+                    <tr class="admxBacked">
+                        <th>Policy Name</th>
+                        <th>State</th>
+                        <th>GPO Name</th>
+                        <th>Feedback?</th>
+                    </tr>
+                    <xsl:apply-templates select="my:PolicyInfo[@xsi:type='AdmPolicyInfo']" />
+                </table>
+            </div>
+        </div>
     </xsl:if>
 </xsl:template>
 
@@ -491,45 +623,15 @@
 </xsl:template>
 
 
-<!-- 
-    Displays AdmxBackedPolicies.  For detailed explanation of what's going on, 
-    see match="my:SupportedPolicies" which is more fully commented and analogous to this function.
-
-    AdmxBackedPolicies can ultimately come from raw registry or alterantely AdmPolicyInfo's from 3rd parties (but not Windows itself).
--->
-<xsl:template match="my:AdmxBackedPolicies">
-    <h1>Policies that need ADMX</h1>
-
-    <xsl:if test="my:PolicyInfo[@xsi:type='RegistrySettingPolicyInfo']  or my:PolicyInfo[@xsi:type='AdmPolicyInfo']">
-        <h3>POLICIES THAT NEED ADMX: Registry policies</h3>
-        <br>These are registry based policies on the target. You can create custom ADMX to support them on MDM.</br>
-
-        <table border="1">
-            <tr class="admxBacked">
-                <th>Key Path</th>
-                <th>Value</th>
-                <th>GPO Name</th>
-                <th>Feedback?</th>
-            </tr>
-            <xsl:apply-templates select="my:PolicyInfo[@xsi:type='RegistrySettingPolicyInfo']" />
-            <xsl:apply-templates select="my:PolicyInfo[@xsi:type='RawRegistryPolicyInfo']" />
-        </table>
-    </xsl:if>
-
-    <xsl:if test="my:PolicyInfo[@xsi:type='AdmPolicyInfo']">
-        <h3>ADMX Policies</h3>
-        <P>These are policies (non-Windows) you're already configuring with a custom ADMX.  These are supported on MDM provided the same ADMX is deployed.</P>
-        <table border="1">
-            <tr class="admxBacked">
-                <th>Policy Name</th>
-                <th>State</th>
-                <th>GPO Name</th>
-                <th>Feedback?</th>
-            </tr>
-            <xsl:apply-templates select="my:PolicyInfo[@xsi:type='AdmPolicyInfo']" />
-        </table>
-    </xsl:if>
+<xsl:template match="my:GpoInfo">
+    <tr>
+        <td><xsl:value-of select="my:Name" /></td>
+        <td><xsl:value-of select="my:Identifier/types:Identifier" /></td>
+        <td><xsl:value-of select="my:CreatedTime" /></td>
+        <td><xsl:value-of select="my:ModifiedTime" /></td>
+    </tr>
 </xsl:template>
+
 
 <xsl:template match="my:PolicyInfo[@xsi:type='AdmPolicyInfo']">
     <tr>

@@ -164,6 +164,9 @@
       <Name>Windows Components/App Package Deployment/Prevent users' app data from being stored on non-system volumes</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Software Protection Platform/Turn off KMS Client Online AVS Validation</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
       <Name>Windows Components/AutoPlay Policies/Disallow Autoplay for non-volume devices</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
@@ -209,13 +212,22 @@
       <Name>Control Panel/Personalization/Prevent enabling lock screen slide show</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Credential User Interface/Require trusted path for credential entry</Name>
+      <Name>System/Logon/Turn off picture password sign-in</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>System/Logon/Turn on convenience PIN sign-in</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>System/Logon/Hide entry points for Fast User Switching</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
       <Name>Windows Components/Credential User Interface/Do not display the password reveal button</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
       <Name>Windows Components/Credential User Interface/Enumerate administrator accounts on elevation</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>System/Device Installation/Device Installation Restrictions/Prevent installation of devices that match any of these device IDs</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
       <Name>Windows Components/Data Collection and Preview Builds/Allow Telemetry</Name>
@@ -266,22 +278,10 @@
       <Name>Windows Components/Delivery Optimization/Monthly Upload Data Cap (in GB)</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>System/Device Guard/Turn On Virtualization Based Security</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>System/Device Installation/Allow remote access to the Plug and Play interface</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>System/Device Installation/Prioritize all digitally signed drivers equally during the driver ranking and selection process</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>System/Device Installation/Device Installation Restrictions/Prevent installation of devices that match any of these device IDs</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
       <Name>System/Device Installation/Device Installation Restrictions/Prevent installation of devices using drivers that match these device setup classes</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>System/Driver Installation/Allow non-administrators to install drivers for these device setup classes</Name>
+      <Name>System/Device Guard/Turn On Virtualization Based Security</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
       <Name>System/Early Launch Antimalware/Boot-Start Driver Initialization Policy</Name>
@@ -317,61 +317,28 @@
       <Name>Windows Components/Event Log Service/System/Specify the maximum log file size (KB)</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/File Explorer/Turn off Data Execution Prevention for Explorer</Name>
+      <Name>Windows Components/Internet Explorer/Add a specific list of search providers to the user's list of search providers</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/File Explorer/Turn off heap termination on corruption</Name>
+      <Name>Windows Components/Internet Explorer/Disable changing secondary home page settings</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
       <Name>Control Panel/Regional and Language Options/Allow input personalization</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>System/Mitigation Options/Untrusted Font Blocking</Name>
+      <Name>Windows Components/Internet Explorer/Disable Periodic Check for Internet Explorer software updates</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>System/Internet Communication Management/Internet Communication settings/Turn off access to all Windows Update features</Name>
+      <Name>Windows Components/Internet Explorer/Let users turn on and use Enterprise Mode from the Tools menu</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>System/Internet Communication Management/Internet Communication settings/Turn off Internet download for Web publishing and online ordering wizards</Name>
+      <Name>Windows Components/Internet Explorer/Prevent bypassing SmartScreen Filter warnings</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>System/Internet Communication Management/Internet Communication settings/Turn off printing over HTTP</Name>
+      <Name>Windows Components/Internet Explorer/Prevent bypassing SmartScreen Filter warnings about files that are not commonly downloaded from the Internet</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>System/Internet Communication Management/Internet Communication settings/Turn off Search Companion content file updates</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>System/Internet Communication Management/Internet Communication settings/Turn off the "Order Prints" picture task</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>System/Internet Communication Management/Internet Communication settings/Turn off the Windows Messenger Customer Experience Improvement Program</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>System/Internet Communication Management/Internet Communication settings/Turn off Windows Customer Experience Improvement Program</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>System/Internet Communication Management/Internet Communication settings/Turn off Windows Error Reporting</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>System/Internet Communication Management/Internet Communication settings/Turn off Windows Update device driver searching</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>System/Kerberos/Fail authentication requests when Kerberos armoring is not available</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>System/Kerberos/Kerberos client support for claims, compound authentication and Kerberos armoring</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>System/Kerberos/Require strict KDC validation</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>System/Kerberos/Set maximum Kerberos SSPI context token buffer size</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>System/Kerberos/Use forest search order</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>System/Logon/Hide entry points for Fast User Switching</Name>
+      <Name>Windows Components/Internet Explorer/Prevent changing proxy settings</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
       <Name>Windows Components/Microsoft Edge/Allow Developer Tools</Name>
@@ -460,46 +427,43 @@
       <Name>Network/Network Isolation/Domains categorized as both work and personal</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Network/Network Provider/Hardened UNC Paths</Name>
+      <Name>Windows Components/Internet Explorer/Prevent changing the default search provider</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Network/Offline Files/Allow or Disallow use of the Offline Files feature</Name>
+      <Name>Windows Components/Internet Explorer/Prevent participation in the Customer Experience Improvement Program</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Network/Offline Files/Configure slow-link mode</Name>
+      <Name>Windows Components/Internet Explorer/Prevent running First Run wizard</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>System/Power Management/Sleep Settings/Allow standby states (S1-S3) when sleeping (on battery)</Name>
+      <Name>Windows Components/Internet Explorer/Restrict search providers to a specific list</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>System/Power Management/Sleep Settings/Allow standby states (S1-S3) when sleeping (plugged in)</Name>
+      <Name>Windows Components/Internet Explorer/Security Zones: Do not allow users to add/delete sites</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>System/Power Management/Sleep Settings/Require a password when a computer wakes (on battery)</Name>
+      <Name>Windows Components/Internet Explorer/Security Zones: Do not allow users to change policies</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>System/Power Management/Sleep Settings/Require a password when a computer wakes (plugged in)</Name>
+      <Name>Windows Components/Internet Explorer/Turn on ActiveX Filtering</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Printers/Allow printers to be published</Name>
+      <Name>Windows Components/Internet Explorer/Turn on Suggested Sites</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>System/Remote Assistance/Configure Offer Remote Assistance</Name>
+      <Name>Windows Components/Internet Explorer/Use the Enterprise Mode IE website list</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>System/Remote Assistance/Configure Solicited Remote Assistance</Name>
+      <Name>Windows Components/Internet Explorer/Compatibility View/Turn on Internet Explorer Standards Mode for local intranet</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>System/Remote Assistance/Customize warning messages</Name>
+      <Name>Windows Components/Internet Explorer/Compatibility View/Use Policy List of Internet Explorer 7 sites</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>System/Remote Assistance/Turn on session logging</Name>
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Advanced Page/Turn off encryption support</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>System/Remote Procedure Call/Enable RPC Endpoint Mapper Client Authentication</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>System/Remote Procedure Call/Restrict Unauthenticated RPC clients</Name>
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Advanced Page/Turn off the flip ahead with page prediction feature</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
       <Name>Windows Components/Search/Allow Cortana</Name>
@@ -529,130 +493,52 @@
       <Name>Start Menu and Taskbar/Start Layout</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>System/System Restore/Turn off System Restore</Name>
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Advanced Page/Turn on Enhanced Protected Mode</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Network/TCPIP Settings/Parameters/Set Window Scaling Heuristics State</Name>
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Internet Zone Template</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Remote Desktop Services/Remote Desktop Connection Client/Do not allow passwords to be saved</Name>
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Intranet Sites: Include all local (intranet) sites not listed in other zones</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Remote Desktop Services/Remote Desktop Session Host/Connections/Allow users to connect remotely by using Remote Desktop Services</Name>
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Intranet Sites: Include all network paths (UNCs)</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Remote Desktop Services/Remote Desktop Session Host/Device and Resource Redirection/Do not allow drive redirection</Name>
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Intranet Zone Template</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Remote Desktop Services/Remote Desktop Session Host/Security/Always prompt for password upon connection</Name>
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Local Machine Zone Template</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Remote Desktop Services/Remote Desktop Session Host/Security/Require secure RPC communication</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Remote Desktop Services/Remote Desktop Session Host/Security/Set client connection encryption level</Name>
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Internet Zone Template</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
       <Name>System/User Profiles/Turn off the advertising ID</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/BitLocker Drive Encryption/Choose default folder for recovery password</Name>
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Intranet Zone Template</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/BitLocker Drive Encryption/Choose drive encryption method and cipher strength (Windows 10 [Version 1511] and later)</Name>
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Local Machine Zone Template</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/BitLocker Drive Encryption/Prevent memory overwrite on restart</Name>
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Restricted Sites Zone Template</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/BitLocker Drive Encryption/Provide the unique identifiers for your organization</Name>
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Trusted Sites Zone Template</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/BitLocker Drive Encryption/Validate smart card certificate usage rule compliance</Name>
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Restricted Sites Zone Template</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/BitLocker Drive Encryption/Fixed Data Drives/Allow access to BitLocker-protected fixed data drives from earlier versions of Windows</Name>
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Site to Zone Assignment List</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/BitLocker Drive Encryption/Fixed Data Drives/Choose how BitLocker-protected fixed drives can be recovered</Name>
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Trusted Sites Zone Template</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/BitLocker Drive Encryption/Fixed Data Drives/Configure use of hardware-based encryption for fixed data drives</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/BitLocker Drive Encryption/Fixed Data Drives/Configure use of passwords for fixed data drives</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/BitLocker Drive Encryption/Fixed Data Drives/Configure use of smart cards on fixed data drives</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/BitLocker Drive Encryption/Fixed Data Drives/Deny write access to fixed drives not protected by BitLocker</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/BitLocker Drive Encryption/Fixed Data Drives/Enforce drive encryption type on fixed data drives</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/BitLocker Drive Encryption/Operating System Drives/Choose how BitLocker-protected operating system drives can be recovered</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/BitLocker Drive Encryption/Operating System Drives/Require additional authentication at startup</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/BitLocker Drive Encryption/Operating System Drives/Allow enhanced PINs for startup</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/BitLocker Drive Encryption/Operating System Drives/Configure minimum PIN length for startup</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/BitLocker Drive Encryption/Operating System Drives/Configure pre-boot recovery message and URL</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/BitLocker Drive Encryption/Operating System Drives/Configure use of hardware-based encryption for operating system drives</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/BitLocker Drive Encryption/Operating System Drives/Configure use of passwords for operating system drives</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/BitLocker Drive Encryption/Operating System Drives/Disallow standard users from changing the PIN or password</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/BitLocker Drive Encryption/Operating System Drives/Enable use of BitLocker authentication requiring preboot keyboard input on slates</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/BitLocker Drive Encryption/Operating System Drives/Enforce drive encryption type on operating system drives</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/BitLocker Drive Encryption/Operating System Drives/Reset platform validation data after BitLocker recovery</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/BitLocker Drive Encryption/Operating System Drives/Use enhanced Boot Configuration Data validation profile</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/BitLocker Drive Encryption/Removable Data Drives/Allow access to BitLocker-protected removable data drives from earlier versions of Windows</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/BitLocker Drive Encryption/Removable Data Drives/Choose how BitLocker-protected removable drives can be recovered</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/BitLocker Drive Encryption/Removable Data Drives/Configure use of hardware-based encryption for removable data drives</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/BitLocker Drive Encryption/Removable Data Drives/Configure use of passwords for removable data drives</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/BitLocker Drive Encryption/Removable Data Drives/Configure use of smart cards on removable data drives</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/BitLocker Drive Encryption/Removable Data Drives/Control use of BitLocker on removable drives</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/BitLocker Drive Encryption/Removable Data Drives/Deny write access to removable drives not protected by BitLocker</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/BitLocker Drive Encryption/Removable Data Drives/Enforce drive encryption type on removable data drives</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Network/Windows Connection Manager/Prohibit connection to roaming Mobile Broadband networks</Name>
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Internet Zone/Access data sources across domains</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
       <Name>Windows Components/Windows Defender/MAPS/Join Microsoft MAPS</Name>
@@ -673,19 +559,7 @@
       <Name>Windows Components/Windows Ink Workspace/Allow Windows Ink Workspace</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Windows Media Player/Do Not Show First Use Dialog Boxes</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Windows Media Player/Prevent Automatic Updates</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Windows Remote Management (WinRM)/WinRM Client/Disallow Digest authentication</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Windows Remote Management (WinRM)/WinRM Service/Disallow WinRM from storing RunAs credentials</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Windows Remote Shell/Allow Remote Shell Access</Name>
+      <Name>Windows Components/Store/Disable all apps from Windows Store </Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
       <Name>Windows Components/Windows Update/Allow Automatic Updates immediate installation</Name>
@@ -733,436 +607,334 @@
       <Name>Network/WLAN Service/WLAN Settings/Allow Windows to automatically connect to suggested open hotspots, to networks shared by contacts, and to hotspots offering paid services</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Network/WWAN Service/WWAN Media Cost/Set 3G Cost</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Network/WWAN Service/WWAN Media Cost/Set 4G Cost</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Printers/Point and Print Restrictions</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Add a specific list of search providers to the user's list of search providers</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Disable changing secondary home page settings</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Disable Periodic Check for Internet Explorer software updates</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Prevent changing proxy settings</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Prevent changing the default search provider</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Prevent participation in the Customer Experience Improvement Program</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Prevent running First Run wizard</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Restrict search providers to a specific list</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Security Zones: Do not allow users to add/delete sites</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Security Zones: Do not allow users to change policies</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Turn on ActiveX Filtering</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Turn on Suggested Sites</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Use the Enterprise Mode IE website list</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Compatibility View/Turn on Internet Explorer Standards Mode for local intranet</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Compatibility View/Use Policy List of Internet Explorer 7 sites</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Advanced Page/Turn off encryption support</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Advanced Page/Turn off the flip ahead with page prediction feature</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Advanced Page/Turn on Enhanced Protected Mode</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Internet Zone Template</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Intranet Sites: Include all local (intranet) sites not listed in other zones</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Intranet Sites: Include all network paths (UNCs)</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Intranet Zone Template</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Local Machine Zone Template</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Internet Zone Template</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Intranet Zone Template</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Local Machine Zone Template</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Restricted Sites Zone Template</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Trusted Sites Zone Template</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Restricted Sites Zone Template</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Site to Zone Assignment List</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Trusted Sites Zone Template</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Internet Zone/Access data sources across domains</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Internet Zone/Access data sources across domains</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Intranet Zone/Access data sources across domains</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Intranet Zone/Access data sources across domains</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Trusted Sites Zone/Access data sources across domains</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Trusted Sites Zone/Access data sources across domains</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Restricted Sites Zone/Access data sources across domains</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Restricted Sites Zone/Access data sources across domains</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Local Machine Zone/Access data sources across domains</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Local Machine Zone/Access data sources across domains</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
       <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Internet Zone/Allow font downloads</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Internet Zone/Allow font downloads</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Intranet Zone/Allow font downloads</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Intranet Zone/Allow font downloads</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Trusted Sites Zone/Allow font downloads</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Trusted Sites Zone/Allow font downloads</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Restricted Sites Zone/Allow font downloads</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Restricted Sites Zone/Allow font downloads</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Local Machine Zone/Allow font downloads</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Local Machine Zone/Allow font downloads</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
       <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Internet Zone/Allow scriptlets</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Internet Zone/Allow scriptlets</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Intranet Zone/Allow scriptlets</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Intranet Zone/Allow scriptlets</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Trusted Sites Zone/Allow scriptlets</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Trusted Sites Zone/Allow scriptlets</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Restricted Sites Zone/Allow scriptlets</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Restricted Sites Zone/Allow scriptlets</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Local Machine Zone/Allow scriptlets</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Local Machine Zone/Allow scriptlets</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
       <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Internet Zone/Automatic prompting for ActiveX controls</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Internet Zone/Automatic prompting for ActiveX controls</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Intranet Zone/Automatic prompting for ActiveX controls</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Intranet Zone/Automatic prompting for ActiveX controls</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Trusted Sites Zone/Automatic prompting for ActiveX controls</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Trusted Sites Zone/Automatic prompting for ActiveX controls</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Restricted Sites Zone/Automatic prompting for ActiveX controls</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Restricted Sites Zone/Automatic prompting for ActiveX controls</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Local Machine Zone/Automatic prompting for ActiveX controls</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Local Machine Zone/Automatic prompting for ActiveX controls</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
       <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Internet Zone/Automatic prompting for file downloads</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Internet Zone/Automatic prompting for file downloads</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Intranet Zone/Automatic prompting for file downloads</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Intranet Zone/Automatic prompting for file downloads</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Trusted Sites Zone/Automatic prompting for file downloads</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Trusted Sites Zone/Automatic prompting for file downloads</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Restricted Sites Zone/Automatic prompting for file downloads</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Restricted Sites Zone/Automatic prompting for file downloads</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Local Machine Zone/Automatic prompting for file downloads</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Local Machine Zone/Automatic prompting for file downloads</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
       <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Internet Zone/Initialize and script ActiveX controls not marked as safe</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Internet Zone/Initialize and script ActiveX controls not marked as safe</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Intranet Zone/Initialize and script ActiveX controls not marked as safe</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Intranet Zone/Initialize and script ActiveX controls not marked as safe</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Trusted Sites Zone/Initialize and script ActiveX controls not marked as safe</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Trusted Sites Zone/Initialize and script ActiveX controls not marked as safe</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Restricted Sites Zone/Initialize and script ActiveX controls not marked as safe</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Restricted Sites Zone/Initialize and script ActiveX controls not marked as safe</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Local Machine Zone/Initialize and script ActiveX controls not marked as safe</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Local Machine Zone/Initialize and script ActiveX controls not marked as safe</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
       <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Internet Zone/Navigate windows and frames across different domains</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Internet Zone/Navigate windows and frames across different domains</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Intranet Zone/Navigate windows and frames across different domains</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Intranet Zone/Navigate windows and frames across different domains</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Trusted Sites Zone/Navigate windows and frames across different domains</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Trusted Sites Zone/Navigate windows and frames across different domains</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Restricted Sites Zone/Navigate windows and frames across different domains</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Restricted Sites Zone/Navigate windows and frames across different domains</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Local Machine Zone/Navigate windows and frames across different domains</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Local Machine Zone/Navigate windows and frames across different domains</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
       <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Internet Zone/Run .NET Framework-reliant components not signed with Authenticode</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Internet Zone/Run .NET Framework-reliant components not signed with Authenticode</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Intranet Zone/Run .NET Framework-reliant components not signed with Authenticode</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Intranet Zone/Run .NET Framework-reliant components not signed with Authenticode</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Trusted Sites Zone/Run .NET Framework-reliant components not signed with Authenticode</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Trusted Sites Zone/Run .NET Framework-reliant components not signed with Authenticode</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Restricted Sites Zone/Run .NET Framework-reliant components not signed with Authenticode</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Restricted Sites Zone/Run .NET Framework-reliant components not signed with Authenticode</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Local Machine Zone/Run .NET Framework-reliant components not signed with Authenticode</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Local Machine Zone/Run .NET Framework-reliant components not signed with Authenticode</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
       <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Internet Zone/Turn on SmartScreen Filter scan</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Internet Zone/Turn on SmartScreen Filter scan</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Intranet Zone/Turn on SmartScreen Filter scan</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Intranet Zone/Turn on SmartScreen Filter scan</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Trusted Sites Zone/Turn on SmartScreen Filter scan</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Trusted Sites Zone/Turn on SmartScreen Filter scan</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Restricted Sites Zone/Turn on SmartScreen Filter scan</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Restricted Sites Zone/Turn on SmartScreen Filter scan</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Local Machine Zone/Turn on SmartScreen Filter scan</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Local Machine Zone/Turn on SmartScreen Filter scan</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
       <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Internet Zone/Userdata persistence</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Internet Zone/Userdata persistence</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Intranet Zone/Userdata persistence</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Intranet Zone/Userdata persistence</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Trusted Sites Zone/Userdata persistence</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Trusted Sites Zone/Userdata persistence</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Restricted Sites Zone/Userdata persistence</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Restricted Sites Zone/Userdata persistence</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Local Machine Zone/Userdata persistence</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Local Machine Zone/Userdata persistence</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
       <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Internet Zone/Web sites in less privileged Web content zones can navigate into this zone</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Internet Zone/Web sites in less privileged Web content zones can navigate into this zone</Name>
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Intranet Zone/Access data sources across domains</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Intranet Zone/Allow font downloads</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Intranet Zone/Allow scriptlets</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Intranet Zone/Automatic prompting for ActiveX controls</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Intranet Zone/Automatic prompting for file downloads</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Intranet Zone/Initialize and script ActiveX controls not marked as safe</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Intranet Zone/Navigate windows and frames across different domains</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Intranet Zone/Run .NET Framework-reliant components not signed with Authenticode</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Intranet Zone/Turn on SmartScreen Filter scan</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Intranet Zone/Userdata persistence</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
       <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Intranet Zone/Web sites in less privileged Web content zones can navigate into this zone</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Intranet Zone/Web sites in less privileged Web content zones can navigate into this zone</Name>
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Local Machine Zone/Access data sources across domains</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Trusted Sites Zone/Web sites in less privileged Web content zones can navigate into this zone</Name>
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Local Machine Zone/Allow font downloads</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Trusted Sites Zone/Web sites in less privileged Web content zones can navigate into this zone</Name>
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Local Machine Zone/Allow scriptlets</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Restricted Sites Zone/Web sites in less privileged Web content zones can navigate into this zone</Name>
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Local Machine Zone/Automatic prompting for ActiveX controls</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Restricted Sites Zone/Web sites in less privileged Web content zones can navigate into this zone</Name>
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Local Machine Zone/Automatic prompting for file downloads</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Local Machine Zone/Initialize and script ActiveX controls not marked as safe</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Local Machine Zone/Navigate windows and frames across different domains</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Local Machine Zone/Run .NET Framework-reliant components not signed with Authenticode</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Local Machine Zone/Turn on SmartScreen Filter scan</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Local Machine Zone/Userdata persistence</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
       <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Local Machine Zone/Web sites in less privileged Web content zones can navigate into this zone</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Internet Zone/Access data sources across domains</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Internet Zone/Allow font downloads</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Internet Zone/Allow scriptlets</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Internet Zone/Automatic prompting for ActiveX controls</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Internet Zone/Automatic prompting for file downloads</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Internet Zone/Initialize and script ActiveX controls not marked as safe</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Internet Zone/Navigate windows and frames across different domains</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Internet Zone/Run .NET Framework-reliant components not signed with Authenticode</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Internet Zone/Turn on SmartScreen Filter scan</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Internet Zone/Userdata persistence</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Internet Zone/Web sites in less privileged Web content zones can navigate into this zone</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Intranet Zone/Access data sources across domains</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Intranet Zone/Allow font downloads</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Intranet Zone/Allow scriptlets</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Intranet Zone/Automatic prompting for ActiveX controls</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Intranet Zone/Automatic prompting for file downloads</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Intranet Zone/Initialize and script ActiveX controls not marked as safe</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Intranet Zone/Navigate windows and frames across different domains</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Intranet Zone/Run .NET Framework-reliant components not signed with Authenticode</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Intranet Zone/Turn on SmartScreen Filter scan</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Intranet Zone/Userdata persistence</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Intranet Zone/Web sites in less privileged Web content zones can navigate into this zone</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Local Machine Zone/Access data sources across domains</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Local Machine Zone/Allow font downloads</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Local Machine Zone/Allow scriptlets</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Local Machine Zone/Automatic prompting for ActiveX controls</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Local Machine Zone/Automatic prompting for file downloads</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Local Machine Zone/Initialize and script ActiveX controls not marked as safe</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Local Machine Zone/Navigate windows and frames across different domains</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Local Machine Zone/Run .NET Framework-reliant components not signed with Authenticode</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Local Machine Zone/Turn on SmartScreen Filter scan</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Local Machine Zone/Userdata persistence</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
       <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Local Machine Zone/Web sites in less privileged Web content zones can navigate into this zone</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Restricted Sites Zone/Access data sources across domains</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Restricted Sites Zone/Allow font downloads</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Restricted Sites Zone/Allow scriptlets</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Restricted Sites Zone/Automatic prompting for ActiveX controls</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Restricted Sites Zone/Automatic prompting for file downloads</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Restricted Sites Zone/Initialize and script ActiveX controls not marked as safe</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Restricted Sites Zone/Navigate windows and frames across different domains</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Restricted Sites Zone/Run .NET Framework-reliant components not signed with Authenticode</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Restricted Sites Zone/Turn on SmartScreen Filter scan</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Restricted Sites Zone/Userdata persistence</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Restricted Sites Zone/Web sites in less privileged Web content zones can navigate into this zone</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Trusted Sites Zone/Access data sources across domains</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Trusted Sites Zone/Allow font downloads</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Trusted Sites Zone/Allow scriptlets</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Trusted Sites Zone/Automatic prompting for ActiveX controls</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Trusted Sites Zone/Automatic prompting for file downloads</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Trusted Sites Zone/Initialize and script ActiveX controls not marked as safe</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Trusted Sites Zone/Navigate windows and frames across different domains</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Trusted Sites Zone/Run .NET Framework-reliant components not signed with Authenticode</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Trusted Sites Zone/Turn on SmartScreen Filter scan</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Trusted Sites Zone/Userdata persistence</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Trusted Sites Zone/Web sites in less privileged Web content zones can navigate into this zone</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Restricted Sites Zone/Access data sources across domains</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Restricted Sites Zone/Allow font downloads</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Restricted Sites Zone/Allow scriptlets</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Restricted Sites Zone/Automatic prompting for ActiveX controls</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Restricted Sites Zone/Automatic prompting for file downloads</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Restricted Sites Zone/Initialize and script ActiveX controls not marked as safe</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Restricted Sites Zone/Navigate windows and frames across different domains</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Restricted Sites Zone/Run .NET Framework-reliant components not signed with Authenticode</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Restricted Sites Zone/Turn on SmartScreen Filter scan</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Restricted Sites Zone/Userdata persistence</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Restricted Sites Zone/Web sites in less privileged Web content zones can navigate into this zone</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Trusted Sites Zone/Access data sources across domains</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Trusted Sites Zone/Allow font downloads</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Trusted Sites Zone/Allow scriptlets</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Trusted Sites Zone/Automatic prompting for ActiveX controls</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Trusted Sites Zone/Automatic prompting for file downloads</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Trusted Sites Zone/Initialize and script ActiveX controls not marked as safe</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Trusted Sites Zone/Navigate windows and frames across different domains</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Trusted Sites Zone/Run .NET Framework-reliant components not signed with Authenticode</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Trusted Sites Zone/Turn on SmartScreen Filter scan</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Trusted Sites Zone/Userdata persistence</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Trusted Sites Zone/Web sites in less privileged Web content zones can navigate into this zone</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Settings/Advanced settings/Browsing/Go to an intranet site for a one-word entry in the Address bar</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
       <Name>Windows Components/Internet Explorer/Security Features/Add-on Management/Add-on List</Name>
@@ -1178,6 +950,117 @@
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
       <Name>Windows Components/RSS Feeds/Prevent downloading of enclosures</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>System/Kerberos/Fail authentication requests when Kerberos armoring is not available</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>System/Kerberos/Kerberos client support for claims, compound authentication and Kerberos armoring</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>System/Kerberos/Require strict KDC validation</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>System/Kerberos/Set maximum Kerberos SSPI context token buffer size</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>System/Kerberos/Use forest search order</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>System/Logon/Do not display network selection UI</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>System/Logon/Turn off app notifications on the lock screen</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Network/Network Provider/Hardened UNC Paths</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>System/Power Management/Sleep Settings/Allow standby states (S1-S3) when sleeping (plugged in)</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>System/Power Management/Sleep Settings/Require a password when a computer wakes (on battery)</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>System/Power Management/Sleep Settings/Require a password when a computer wakes (plugged in)</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Printers/Point and Print Restrictions</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Printers/Allow printers to be published</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>System/Remote Assistance/Configure Offer Remote Assistance</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>System/Remote Assistance/Configure Solicited Remote Assistance</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>System/Remote Assistance/Customize warning messages</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>System/Remote Assistance/Turn on session logging</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>System/Remote Procedure Call/Enable RPC Endpoint Mapper Client Authentication</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>System/Remote Procedure Call/Restrict Unauthenticated RPC clients</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>System/System Restore/Turn off System Restore</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Remote Desktop Services/Remote Desktop Connection Client/Do not allow passwords to be saved</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Remote Desktop Services/Remote Desktop Session Host/Connections/Allow users to connect remotely by using Remote Desktop Services</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Remote Desktop Services/Remote Desktop Session Host/Device and Resource Redirection/Do not allow drive redirection</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Remote Desktop Services/Remote Desktop Session Host/Security/Always prompt for password upon connection</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Remote Desktop Services/Remote Desktop Session Host/Security/Require secure RPC communication</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Remote Desktop Services/Remote Desktop Session Host/Security/Set client connection encryption level</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/BitLocker Drive Encryption/Choose drive encryption method and cipher strength (Windows 10 [Version 1511] and later)</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/BitLocker Drive Encryption/Fixed Data Drives/Choose how BitLocker-protected fixed drives can be recovered</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/BitLocker Drive Encryption/Fixed Data Drives/Deny write access to fixed drives not protected by BitLocker</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/BitLocker Drive Encryption/Operating System Drives/Choose how BitLocker-protected operating system drives can be recovered</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/BitLocker Drive Encryption/Operating System Drives/Require additional authentication at startup</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/BitLocker Drive Encryption/Operating System Drives/Configure minimum PIN length for startup</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/BitLocker Drive Encryption/Operating System Drives/Configure pre-boot recovery message and URL</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/BitLocker Drive Encryption/Removable Data Drives/Deny write access to removable drives not protected by BitLocker</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/File Explorer/Configure Windows Defender SmartScreen</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Network/WWAN Service/WWAN Media Cost/Set 3G Cost</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Network/WWAN Service/WWAN Media Cost/Set 4G Cost</Name>
     </PolicyMap>
   </Computer>
   <User>
@@ -1224,10 +1107,34 @@
       <Name>Windows Components/Credential User Interface/Do not display the password reveal button</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Desktop/Prohibit User from manually redirecting Profile Folders</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
       <Name>Windows Components/Data Collection and Preview Builds/Allow Telemetry</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Desktop/Prohibit User from manually redirecting Profile Folders</Name>
+      <Name>Windows Components/Internet Explorer/Add a specific list of search providers to the user's list of search providers</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Disable changing home page settings</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Disable changing secondary home page settings</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Let users turn on and use Enterprise Mode from the Tools menu</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Prevent bypassing SmartScreen Filter warnings</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Prevent bypassing SmartScreen Filter warnings about files that are not commonly downloaded from the Internet</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Prevent changing proxy settings</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Start Menu and Taskbar/Notifications/Turn off toast notifications on the lock screen</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
       <Name>Windows Components/Microsoft Edge/Allow Developer Tools</Name>
@@ -1278,33 +1185,6 @@
       <Name>Windows Components/Microsoft Edge/Allow Extensions</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Control Panel/Printers/Point and Print Restrictions</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Control Panel/Programs/Hide "Windows Marketplace"</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>System/Removable Storage Access/All Removable Storage classes: Deny all access</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Start Menu and Taskbar/Force Start to be either full screen size or menu size</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Start Menu and Taskbar/Start Layout</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Windows Update/Remove access to use all Windows Update features</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Add a specific list of search providers to the user's list of search providers</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Disable changing secondary home page settings</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Prevent changing proxy settings</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
       <Name>Windows Components/Internet Explorer/Prevent changing the default search provider</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
@@ -1332,10 +1212,19 @@
       <Name>Windows Components/Internet Explorer/Compatibility View/Use Policy List of Internet Explorer 7 sites</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>System/Removable Storage Access/All Removable Storage classes: Deny all access</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
       <Name>Windows Components/Internet Explorer/Internet Control Panel/Advanced Page/Turn off encryption support</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
       <Name>Windows Components/Internet Explorer/Internet Control Panel/Advanced Page/Turn off the flip ahead with page prediction feature</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Start Menu and Taskbar/Force Start to be either full screen size or menu size</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Start Menu and Taskbar/Start Layout</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
       <Name>Windows Components/Internet Explorer/Internet Control Panel/Advanced Page/Turn on Enhanced Protected Mode</Name>
@@ -1383,331 +1272,337 @@
       <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Internet Zone/Access data sources across domains</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Internet Zone/Access data sources across domains</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Intranet Zone/Access data sources across domains</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Intranet Zone/Access data sources across domains</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Trusted Sites Zone/Access data sources across domains</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Trusted Sites Zone/Access data sources across domains</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Restricted Sites Zone/Access data sources across domains</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Restricted Sites Zone/Access data sources across domains</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Local Machine Zone/Access data sources across domains</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Local Machine Zone/Access data sources across domains</Name>
+      <Name>Windows Components/Windows Update/Remove access to use all Windows Update features</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
       <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Internet Zone/Allow font downloads</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Internet Zone/Allow font downloads</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Intranet Zone/Allow font downloads</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Intranet Zone/Allow font downloads</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Trusted Sites Zone/Allow font downloads</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Trusted Sites Zone/Allow font downloads</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Restricted Sites Zone/Allow font downloads</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Restricted Sites Zone/Allow font downloads</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Local Machine Zone/Allow font downloads</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Local Machine Zone/Allow font downloads</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
       <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Internet Zone/Allow scriptlets</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Internet Zone/Allow scriptlets</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Intranet Zone/Allow scriptlets</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Intranet Zone/Allow scriptlets</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Trusted Sites Zone/Allow scriptlets</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Trusted Sites Zone/Allow scriptlets</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Restricted Sites Zone/Allow scriptlets</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Restricted Sites Zone/Allow scriptlets</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Local Machine Zone/Allow scriptlets</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Local Machine Zone/Allow scriptlets</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
       <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Internet Zone/Automatic prompting for ActiveX controls</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Internet Zone/Automatic prompting for ActiveX controls</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Intranet Zone/Automatic prompting for ActiveX controls</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Intranet Zone/Automatic prompting for ActiveX controls</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Trusted Sites Zone/Automatic prompting for ActiveX controls</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Trusted Sites Zone/Automatic prompting for ActiveX controls</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Restricted Sites Zone/Automatic prompting for ActiveX controls</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Restricted Sites Zone/Automatic prompting for ActiveX controls</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Local Machine Zone/Automatic prompting for ActiveX controls</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Local Machine Zone/Automatic prompting for ActiveX controls</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
       <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Internet Zone/Automatic prompting for file downloads</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Internet Zone/Automatic prompting for file downloads</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Intranet Zone/Automatic prompting for file downloads</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Intranet Zone/Automatic prompting for file downloads</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Trusted Sites Zone/Automatic prompting for file downloads</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Trusted Sites Zone/Automatic prompting for file downloads</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Restricted Sites Zone/Automatic prompting for file downloads</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Restricted Sites Zone/Automatic prompting for file downloads</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Local Machine Zone/Automatic prompting for file downloads</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Local Machine Zone/Automatic prompting for file downloads</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
       <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Internet Zone/Initialize and script ActiveX controls not marked as safe</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Internet Zone/Initialize and script ActiveX controls not marked as safe</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Intranet Zone/Initialize and script ActiveX controls not marked as safe</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Intranet Zone/Initialize and script ActiveX controls not marked as safe</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Trusted Sites Zone/Initialize and script ActiveX controls not marked as safe</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Trusted Sites Zone/Initialize and script ActiveX controls not marked as safe</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Restricted Sites Zone/Initialize and script ActiveX controls not marked as safe</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Restricted Sites Zone/Initialize and script ActiveX controls not marked as safe</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Local Machine Zone/Initialize and script ActiveX controls not marked as safe</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Local Machine Zone/Initialize and script ActiveX controls not marked as safe</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
       <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Internet Zone/Navigate windows and frames across different domains</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Internet Zone/Navigate windows and frames across different domains</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Intranet Zone/Navigate windows and frames across different domains</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Intranet Zone/Navigate windows and frames across different domains</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Trusted Sites Zone/Navigate windows and frames across different domains</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Trusted Sites Zone/Navigate windows and frames across different domains</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Restricted Sites Zone/Navigate windows and frames across different domains</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Restricted Sites Zone/Navigate windows and frames across different domains</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Local Machine Zone/Navigate windows and frames across different domains</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Local Machine Zone/Navigate windows and frames across different domains</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
       <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Internet Zone/Run .NET Framework-reliant components not signed with Authenticode</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Internet Zone/Run .NET Framework-reliant components not signed with Authenticode</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Intranet Zone/Run .NET Framework-reliant components not signed with Authenticode</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Intranet Zone/Run .NET Framework-reliant components not signed with Authenticode</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Trusted Sites Zone/Run .NET Framework-reliant components not signed with Authenticode</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Trusted Sites Zone/Run .NET Framework-reliant components not signed with Authenticode</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Restricted Sites Zone/Run .NET Framework-reliant components not signed with Authenticode</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Restricted Sites Zone/Run .NET Framework-reliant components not signed with Authenticode</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Local Machine Zone/Run .NET Framework-reliant components not signed with Authenticode</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Local Machine Zone/Run .NET Framework-reliant components not signed with Authenticode</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
       <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Internet Zone/Turn on SmartScreen Filter scan</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Internet Zone/Turn on SmartScreen Filter scan</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Intranet Zone/Turn on SmartScreen Filter scan</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Intranet Zone/Turn on SmartScreen Filter scan</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Trusted Sites Zone/Turn on SmartScreen Filter scan</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Trusted Sites Zone/Turn on SmartScreen Filter scan</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Restricted Sites Zone/Turn on SmartScreen Filter scan</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Restricted Sites Zone/Turn on SmartScreen Filter scan</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Local Machine Zone/Turn on SmartScreen Filter scan</Name>
-    </PolicyMap>
-    <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Local Machine Zone/Turn on SmartScreen Filter scan</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
       <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Internet Zone/Userdata persistence</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Internet Zone/Userdata persistence</Name>
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Internet Zone/Web sites in less privileged Web content zones can navigate into this zone</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Intranet Zone/Access data sources across domains</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Intranet Zone/Allow font downloads</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Intranet Zone/Allow scriptlets</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Intranet Zone/Automatic prompting for ActiveX controls</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Intranet Zone/Automatic prompting for file downloads</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Intranet Zone/Initialize and script ActiveX controls not marked as safe</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Intranet Zone/Navigate windows and frames across different domains</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Intranet Zone/Run .NET Framework-reliant components not signed with Authenticode</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Intranet Zone/Turn on SmartScreen Filter scan</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
       <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Intranet Zone/Userdata persistence</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Intranet Zone/Userdata persistence</Name>
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Intranet Zone/Web sites in less privileged Web content zones can navigate into this zone</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Trusted Sites Zone/Userdata persistence</Name>
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Local Machine Zone/Access data sources across domains</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Trusted Sites Zone/Userdata persistence</Name>
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Local Machine Zone/Allow font downloads</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Restricted Sites Zone/Userdata persistence</Name>
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Local Machine Zone/Allow scriptlets</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Restricted Sites Zone/Userdata persistence</Name>
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Local Machine Zone/Automatic prompting for ActiveX controls</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Local Machine Zone/Automatic prompting for file downloads</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Local Machine Zone/Initialize and script ActiveX controls not marked as safe</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Local Machine Zone/Navigate windows and frames across different domains</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Local Machine Zone/Run .NET Framework-reliant components not signed with Authenticode</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Local Machine Zone/Turn on SmartScreen Filter scan</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
       <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Local Machine Zone/Userdata persistence</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Local Machine Zone/Userdata persistence</Name>
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Local Machine Zone/Web sites in less privileged Web content zones can navigate into this zone</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Internet Zone/Web sites in less privileged Web content zones can navigate into this zone</Name>
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Internet Zone/Access data sources across domains</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Internet Zone/Allow font downloads</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Internet Zone/Allow scriptlets</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Internet Zone/Automatic prompting for ActiveX controls</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Internet Zone/Automatic prompting for file downloads</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Internet Zone/Initialize and script ActiveX controls not marked as safe</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Internet Zone/Navigate windows and frames across different domains</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Internet Zone/Run .NET Framework-reliant components not signed with Authenticode</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Internet Zone/Turn on SmartScreen Filter scan</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Internet Zone/Userdata persistence</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
       <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Internet Zone/Web sites in less privileged Web content zones can navigate into this zone</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Intranet Zone/Web sites in less privileged Web content zones can navigate into this zone</Name>
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Intranet Zone/Access data sources across domains</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Intranet Zone/Allow font downloads</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Intranet Zone/Allow scriptlets</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Intranet Zone/Automatic prompting for ActiveX controls</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Intranet Zone/Automatic prompting for file downloads</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Intranet Zone/Initialize and script ActiveX controls not marked as safe</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Intranet Zone/Navigate windows and frames across different domains</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Intranet Zone/Run .NET Framework-reliant components not signed with Authenticode</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Intranet Zone/Turn on SmartScreen Filter scan</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Intranet Zone/Userdata persistence</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
       <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Intranet Zone/Web sites in less privileged Web content zones can navigate into this zone</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Trusted Sites Zone/Web sites in less privileged Web content zones can navigate into this zone</Name>
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Local Machine Zone/Access data sources across domains</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Trusted Sites Zone/Web sites in less privileged Web content zones can navigate into this zone</Name>
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Local Machine Zone/Allow font downloads</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Restricted Sites Zone/Web sites in less privileged Web content zones can navigate into this zone</Name>
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Local Machine Zone/Allow scriptlets</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Local Machine Zone/Automatic prompting for ActiveX controls</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Local Machine Zone/Automatic prompting for file downloads</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Local Machine Zone/Initialize and script ActiveX controls not marked as safe</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Local Machine Zone/Navigate windows and frames across different domains</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Local Machine Zone/Run .NET Framework-reliant components not signed with Authenticode</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Local Machine Zone/Turn on SmartScreen Filter scan</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Local Machine Zone/Userdata persistence</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Local Machine Zone/Web sites in less privileged Web content zones can navigate into this zone</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Restricted Sites Zone/Access data sources across domains</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Restricted Sites Zone/Allow font downloads</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Restricted Sites Zone/Allow scriptlets</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Restricted Sites Zone/Automatic prompting for ActiveX controls</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Restricted Sites Zone/Automatic prompting for file downloads</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Restricted Sites Zone/Initialize and script ActiveX controls not marked as safe</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Restricted Sites Zone/Navigate windows and frames across different domains</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Restricted Sites Zone/Run .NET Framework-reliant components not signed with Authenticode</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Restricted Sites Zone/Turn on SmartScreen Filter scan</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Restricted Sites Zone/Userdata persistence</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
       <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Restricted Sites Zone/Web sites in less privileged Web content zones can navigate into this zone</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Local Machine Zone/Web sites in less privileged Web content zones can navigate into this zone</Name>
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Trusted Sites Zone/Access data sources across domains</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Local Machine Zone/Web sites in less privileged Web content zones can navigate into this zone</Name>
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Trusted Sites Zone/Allow font downloads</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Trusted Sites Zone/Allow scriptlets</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Trusted Sites Zone/Automatic prompting for ActiveX controls</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Trusted Sites Zone/Automatic prompting for file downloads</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Trusted Sites Zone/Initialize and script ActiveX controls not marked as safe</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Trusted Sites Zone/Navigate windows and frames across different domains</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Trusted Sites Zone/Run .NET Framework-reliant components not signed with Authenticode</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Trusted Sites Zone/Turn on SmartScreen Filter scan</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Trusted Sites Zone/Userdata persistence</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Locked-Down Trusted Sites Zone/Web sites in less privileged Web content zones can navigate into this zone</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Restricted Sites Zone/Access data sources across domains</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Restricted Sites Zone/Allow font downloads</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Restricted Sites Zone/Allow scriptlets</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Restricted Sites Zone/Automatic prompting for ActiveX controls</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Restricted Sites Zone/Automatic prompting for file downloads</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Restricted Sites Zone/Initialize and script ActiveX controls not marked as safe</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Restricted Sites Zone/Navigate windows and frames across different domains</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Restricted Sites Zone/Run .NET Framework-reliant components not signed with Authenticode</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Restricted Sites Zone/Turn on SmartScreen Filter scan</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Restricted Sites Zone/Userdata persistence</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Restricted Sites Zone/Web sites in less privileged Web content zones can navigate into this zone</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Trusted Sites Zone/Access data sources across domains</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Trusted Sites Zone/Allow font downloads</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Trusted Sites Zone/Allow scriptlets</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Trusted Sites Zone/Automatic prompting for ActiveX controls</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Trusted Sites Zone/Automatic prompting for file downloads</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Trusted Sites Zone/Initialize and script ActiveX controls not marked as safe</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Trusted Sites Zone/Navigate windows and frames across different domains</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Trusted Sites Zone/Run .NET Framework-reliant components not signed with Authenticode</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Trusted Sites Zone/Turn on SmartScreen Filter scan</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Trusted Sites Zone/Userdata persistence</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Control Panel/Security Page/Trusted Sites Zone/Web sites in less privileged Web content zones can navigate into this zone</Name>
+    </PolicyMap>
+    <PolicyMap xsi:type="AdmxPolicyMap">
+      <Name>Windows Components/Internet Explorer/Internet Settings/Advanced settings/Browsing/Go to an intranet site for a one-word entry in the Address bar</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
       <Name>Windows Components/Internet Explorer/Security Features/Add-on Management/Add-on List</Name>
@@ -1722,10 +1617,10 @@
       <Name>Windows Components/Internet Explorer/Security Features/Add-on Management/Turn off blocking of outdated ActiveX controls for Internet Explorer on specific domains</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/Internet Explorer/Disable changing home page settings</Name>
+      <Name>Windows Components/RSS Feeds/Prevent downloading of enclosures</Name>
     </PolicyMap>
     <PolicyMap xsi:type="AdmxPolicyMap">
-      <Name>Windows Components/RSS Feeds/Prevent downloading of enclosures</Name>
+      <Name>Control Panel/Printers/Point and Print Restrictions</Name>
     </PolicyMap>
   </User>
 </MDMPolicyMappings>

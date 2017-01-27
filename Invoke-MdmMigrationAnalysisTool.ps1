@@ -42,6 +42,8 @@ User name to run query against.  Default is currently logged on user.
 .PARAMETER $targetComputer
 Computer to run query against.  Default is currently computer.
 
+.PARAMETER $targetDomain
+Domain to run MMAT against.  Queries ALL GPO's.
 
 .EXAMPLE
 Invoke-MdmMigrationAnalysisTool -collectGPOReports -runAnalysisTool
@@ -60,7 +62,8 @@ param([switch]$collectGPOReports,
       [switch]$runAnalysisTool,
       [string]$analysisToolOutputDirectory=".",
       [string]$targetUser=$ENV:USERNAME,
-      [string]$targetComputer=".")
+      [string]$targetComputer=".",
+      [string]$targetDomain)
 
 
 #
@@ -75,8 +78,11 @@ $reportInformationXmlRelative = "MDMMigrationAnalysisReportInformation.xml"
 # File that contains any GPOID's that Get-GPOReport failed to parse
 $invalidGpoTxt = Join-Path $gpoReportOutputDirectory "Get-GPOReportFailures.txt"
 
-# Prefix of XML containing GPOReports
+# Prefix of XML containing GPOReports (when NOT querying all GPO's)
 $gpoReportPrefix = "GPOReport-"
+
+# When querying all GPO's in a domain, use this output file
+$gpoDomainReportFileNameRelative = "GPOReportAll.xml"
 
 # Name of MMAT PS1 log.  Note the EXE uses MdmMigrationAnalysisTool.log and we don't want
 # separate sources going to same log,
@@ -119,20 +125,30 @@ function Write-ReportInformation()
     $xmlWriter.WriteComment("Information about the client, user, and domain these reports were collected from")
     $xmlWriter.WriteStartElement("ReportSourceInformation")
 
-    # Actual data of the document itself
     $xmlWriter.WriteElementString("OSVersion",[Environment]::OSVersion.version.ToString())
-    $xmlWriter.WriteElementString("UserName",$targetUser)
 
-    if ($targetComputer -eq ".")
+
+    # Actual data of the document itself
+    if ($targetDomain -ne [String]::Empty)
     {
-        $computerNameToQuery = $env:COMPUTERNAME
+        $xmlWriter.WriteElementString("TargetDomain", $targetDomain)
     }
     else
     {
-        $computerNameToQuery = $targetComputer
+        $xmlWriter.WriteElementString("UserName",$targetUser)
+        if ($targetComputer -eq ".")
+        {
+            $computerNameToQuery = $env:COMPUTERNAME
+        }
+        else
+        {
+            $computerNameToQuery = $targetComputer
+        }
+
+        $xmlWriter.WriteElementString("ComputerName",[System.Net.Dns]::GetHostEntry($computerNameToQuery).hostname)
     }
 
-    $xmlWriter.WriteElementString("ComputerName",[System.Net.Dns]::GetHostEntry($computerNameToQuery).hostname)
+    
     $xmlWriter.WriteElementString("ReportCreationTime",(Get-Date))
 
     # End the XML document
@@ -216,7 +232,7 @@ function Write-RsopBackedGpoReports()
 {
     if ($VerbosePreference -ne "Continue")
     {
-        Write-Host "Beginning query of policy objects.  This may take many minutes.  Set PowerShell variable VerbosePreference=""Continue"" to get more detailed progress."
+        Write-Host "Beginning query of policy objects.  This may take a few minutes.  Set PowerShell variable VerbosePreference=""Continue"" to get more detailed progress."
     }
 
     $userSid = Get-TargetUserSid
@@ -254,7 +270,44 @@ function Write-RsopBackedGpoReports()
     }
 
     Write-MMATLog "Completed querying GPO list"
-    Write-ReportInformation
+}
+
+#
+#  Write-GPOReportForDomain gets GPO report with "-all" to query an entire domain at at time.
+#
+function Write-GPOReportForDomain()
+{
+    Write-MMATLog ("Beginning querying all GPO reports for domain {0}.  This may take a few minutes." -f $targetDomain)
+
+    # Get-GPOReport requires absolute path, so use extra logic below in case we have a "." passed in as output dir
+    $gpoDomainReportFileName = Join-Path (Get-Item $gpoReportOutputDirectory).FullName $gpoDomainReportFileNameRelative
+    Get-GPOReport -Domain $targetDomain -all -ReportType Xml -Path $gpoDomainReportFileName -ErrorAction Stop
+    Write-MMATLog "Completed querying all GPO reports"
+
+    # Create gporeport-{GUID} for each of the <GPO> children off of <GPOS>, since this is what the analysis tool 
+    # interacts with.
+    $allXml = [xml](gc $gpoDomainReportFileName)
+    $gpos = $allXml.report.gpo
+
+    foreach ($gpo in $gpos)
+    {
+        $gpoId = $gpo.Identifier.Identifier.'#text'
+        Set-Content -Path (Join-Path $gpoReportOutputDirectory ($gpoReportPrefix + $gpoId + ".xml")) -Value $gpo.OuterXml
+    }
+}
+
+#
+#  MMAT currently only has an English mapping table.  Get-GPOReport returns strings as localized, so when MMAT
+#  runs on a non-English system it gets confused on ADMX policies in particular.  Rather than let the misleading
+#  report be generated, immediately fail
+#
+function Verify-RunningOnEnglish
+{
+    $displayName = (Get-Culture).DisplayName
+    if (-not ($displayName -match "English"))
+    {
+        throw ("Language must be set to English, it is currently <{0}>" -f $displayName)
+    }
 }
 
 #
@@ -378,10 +431,26 @@ function Verify-MMATParameters()
     {
         throw ("TargetUser {0} is not formatted correctly.  Must be of format DOMAIN\UserName." -f $targetUser)
     }
+
+    # Target domain must be fully qualified.  Get-GPOReport won't work for simple 'netbios' name and 
+    # returns a somewhat cryptic that we'll insulate user from.
+    if ($targetDomain -ne [String]::Empty)
+    {
+        if ($targetDomain -notmatch "\.")
+        {
+            throw ("TargetDomain {0} must be fully qualified" -f $targetDomain)
+        }
+
+        if (($targetUser -ne $ENV:USERNAME) -or ($targetComputer -ne "."))
+        {
+            throw ("TargetDomain is mutually exclusive with targetUser/targetComputer, since TargetDomain queries 'all' GPO's independent of user/machine")
+        }
+    }
 }
 
 
 Verify-MMATParameters
+Verify-RunningOnEnglish
 
 #
 #  Actual "main" portion of the script
@@ -394,7 +463,16 @@ if ($collectGPOReports)
     $removeActiveDirectoryModule = Import-MMATModules
     
     New-GPOReportDirectory
-    Write-RsopBackedGpoReports
+    if ($targetDomain -eq "")
+    {
+        Write-RsopBackedGpoReports
+    }
+    else
+    {
+        Write-GPOReportForDomain
+    }
+    
+    Write-ReportInformation
 
     Remove-MMATModules $removeActiveDirectoryModule
 }
