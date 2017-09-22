@@ -298,7 +298,7 @@
             </xsl:if>
             <td><xsl:value-of select="my:OSVersion" /></td>
             <td><xsl:value-of select="my:ReportCreationTime" /></td>
-            <td><xsl:value-of select="../my:MMATVersion" /></td>
+            <td>V1.0</td>
         </tr>
     </table>
 </xsl:template>
